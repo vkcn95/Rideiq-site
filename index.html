@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr" class="dark">
+<html lang="fr" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RideIQ — L'intelligence financière des chauffeurs VTC</title>
+    <title>RideIQ — L'Assistant de Marge Nette pour Chauffeurs VTC</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -11,8 +11,9 @@
             theme: {
                 extend: {
                     colors: {
-                        darkBg: '#0F172A',
-                        cardBg: '#1E293B',
+                        darkBg: '#0B0F19',
+                        cardBg: '#111827',
+                        cardBorder: '#1F2937',
                         accentGreen: '#10B981',
                         accentBlue: '#3B82F6',
                     }
@@ -23,78 +24,109 @@
 </head>
 <body class="bg-darkBg text-slate-100 font-sans antialiased selection:bg-accentGreen selection:text-white">
 
+    <!-- BANNIÈRE PHASE DE TEST -->
+    <div class="bg-gradient-to-r from-accentBlue to-accentGreen text-white text-xs md:text-sm py-2 px-4 text-center font-bold">
+        🚀 PHASE DE TEST PILOTE • Compatible iPhone & Android • 100% Automatique
+    </div>
+
     <!-- HEADER / NAVBAR -->
-    <header class="max-w-6xl mx-auto px-6 py-6 flex justify-between items-center">
+    <header class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center border-b border-cardBorder">
         <div class="flex items-center space-x-3">
-            <span class="text-2xl font-black bg-gradient-to-r from-accentBlue to-accentGreen bg-clip-text text-transparent">⚡ RideIQ</span>
+            <span class="text-2xl font-black tracking-tight text-white">⚡ Ride<span class="text-accentGreen">IQ</span></span>
         </div>
         <div>
-            <a href="https://www.icloud.com/shortcuts/6e650fc83f1a40659e35eefc53efc132" class="bg-accentGreen hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg transition-all text-sm">
-                📥 Obtenir le Raccourci iOS
+            <a href="#choix-plateforme" class="bg-accentGreen hover:bg-emerald-600 text-white font-bold px-5 py-2.5 rounded-xl shadow-lg transition-all text-sm flex items-center gap-2">
+                <span>Installer mon application</span>
+                <span>➔</span>
             </a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="max-w-4xl mx-auto px-6 pt-16 pb-20 text-center">
-        <span class="inline-block bg-slate-800 text-accentGreen font-semibold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider mb-6 border border-slate-700">
-            🚀 Conçu par des chauffeurs, pour les chauffeurs VTC
-        </span>
+    <section class="max-w-4xl mx-auto px-6 pt-12 pb-16 text-center">
+        <div class="inline-flex items-center gap-2 bg-cardBg border border-cardBorder px-4 py-2 rounded-full mb-8">
+            <div class="flex text-yellow-400 text-xs">★★★★★</div>
+            <span class="text-xs text-slate-300 font-medium">Validé par les chauffeurs VTC (Uber, Bolt, Heetch, FreeNow)</span>
+        </div>
+
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-            Prenez le contrôle de vos courses. <br>
-            <span class="bg-gradient-to-r from-accentBlue to-accentGreen bg-clip-text text-transparent">Décidez en 1 seconde.</span>
+            N'acceptez plus de courses <br>
+            <span class="bg-gradient-to-r from-accentBlue via-emerald-400 to-accentGreen bg-clip-text text-transparent">qui vous font perdre de l'argent.</span>
         </h1>
-        <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
-            RideIQ analyse instantanément la rentabilité nette de chaque course sur <span class="text-white font-semibold">Uber, Bolt, Heetch et FreeNow</span> en déduisant vos commissions et vos frais réels (carburant ou électricité).
+        <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            RideIQ calcule en <strong class="text-white">1 seconde</strong> votre bénéfice net exact dans la poche avant d'accepter une course sur votre application VTC.
         </p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="https://www.icloud.com/shortcuts/6e650fc83f1a40659e35eefc53efc132" class="bg-accentGreen hover:bg-emerald-600 text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl transition-all flex items-center justify-center gap-2">
-                <span>📥 Installer sur iPhone (Gratuit)</span>
+
+        <!-- APPEL À L'ACTION PRINCIPAL -->
+        <div class="max-w-md mx-auto mb-12">
+            <a href="#choix-plateforme" class="block w-full bg-accentGreen hover:bg-emerald-600 text-white font-bold text-lg py-4 rounded-xl shadow-xl transition-all flex items-center justify-center gap-2">
+                👇 Choisir mon téléphone & Installer
             </a>
-            <a href="#features" class="bg-cardBg hover:bg-slate-800 text-slate-200 font-semibold text-base px-8 py-4 rounded-xl border border-slate-700 transition-all flex items-center justify-center">
-                En savoir plus 👇
-            </a>
+            <p class="text-xs text-slate-500 mt-3">Installation rapide en moins de 30 secondes.</p>
         </div>
     </section>
 
-    <!-- FEATURES / CARACTÉRISTIQUES -->
-    <section id="features" class="max-w-6xl mx-auto px-6 py-16 border-t border-slate-800">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold mb-4">Pourquoi les chauffeurs adoptent RideIQ</h2>
-            <p class="text-slate-400">Une précision chirurgicale pour maximiser votre chiffre d'affaires net.</p>
+    <!-- SECTION CHOIX DE LA PLATEFORME -->
+    <section id="choix-plateforme" class="max-w-4xl mx-auto px-6 py-16 border-t border-cardBorder">
+        <div class="text-center mb-12">
+            <span class="bg-accentBlue/20 text-accentBlue text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Étape cruciale</span>
+            <h2 class="text-3xl font-bold mt-3 mb-3">Quel téléphone utilisez-vous ?</h2>
+            <p class="text-slate-400">Sélectionnez votre système d'exploitation pour afficher le bon guide d'installation :</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Feature 1 -->
-            <div class="bg-cardBg p-8 rounded-2xl border border-slate-800">
-                <div class="text-3xl mb-4">⚡</div>
-                <h3 class="text-xl font-bold mb-2">Automatisation Totale</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Le raccourci se déclenche tout seul dès que vous ouvrez l'application Uber, Bolt, Heetch ou FreeNow. Zéro manipulation en conduisant.
-                </p>
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <!-- CARTE IPHONE (IOS) -->
+            <div class="bg-cardBg p-8 rounded-3xl border-2 border-accentBlue/40 hover:border-accentBlue transition-all shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-4xl">🍏</span>
+                        <div>
+                            <h3 class="font-bold text-xl text-white">Je suis sur iPhone (iOS)</h3>
+                            <p class="text-xs text-slate-400">Apple Raccourcis natifs</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+                        Idéal pour les utilisateurs d'iPhone. Le raccourci officiel se déclenche automatiquement à l'ouverture d'Uber ou Bolt.
+                    </p>
+                </div>
+                <div>
+                    <a href="https://www.icloud.com/shortcuts/6e650fc83f1a40659e35eefc53efc132" class="block text-center bg-accentBlue hover:bg-blue-600 text-white font-bold py-3.5 rounded-xl transition-all text-sm shadow-lg">
+                        📥 Télécharger pour iPhone
+                    </a>
+                </div>
             </div>
-            <!-- Feature 2 -->
-            <div class="bg-cardBg p-8 rounded-2xl border border-slate-800">
-                <div class="text-3xl mb-4">💶</div>
-                <h3 class="text-xl font-bold mb-2">Calcul Net Précis</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Déduisez vos commissions exactes (20% à 25%) et vos frais au litre (€/L) ou au kilowattheure (€/kWh) pour connaître votre bénéfice net réel.
-                </p>
+
+            <!-- CARTE ANDROID -->
+            <div class="bg-cardBg p-8 rounded-3xl border-2 border-accentGreen/40 hover:border-accentGreen transition-all shadow-xl flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-4xl">🤖</span>
+                        <div>
+                            <h3 class="font-bold text-xl text-white">Je suis sur Android</h3>
+                            <p class="text-xs text-slate-400">MacroDroid Automatique</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-300 mb-6 leading-relaxed">
+                        Pour afficher l'assistant instantanément au lancement d'Uber Driver. Suivez les 2 étapes ci-dessous :
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <a href="https://play.google.com/store/apps/details?id=com.arlosoft.macrodroid" target="_blank" class="block text-center bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold py-2.5 rounded-xl border border-cardBorder transition-all text-xs">
+                        1. Installer MacroDroid (Play Store)
+                    </a>
+                    <div class="bg-emerald-950/40 border border-emerald-500/30 p-3 rounded-xl text-xs text-emerald-300">
+                        ⚡ <strong>Macro configurée :</strong> Votre application s'ouvrira dès le lancement d'Uber Driver !
+                    </div>
+                </div>
             </div>
-            <!-- Feature 3 -->
-            <div class="bg-cardBg p-8 rounded-2xl border border-slate-800">
-                <div class="text-3xl mb-4">🌍</div>
-                <h3 class="text-xl font-bold mb-2">100% Multilingue</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Disponible en Français, Anglais, Allemand et Espagnol. Parfait si vous roulez à l'international ou avec des touristes.
-                </p>
-            </div>
+
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="max-w-6xl mx-auto px-6 py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
-        <p>© 2026 RideIQ. Tous droits réservés. L'outil indispensable des chauffeurs VTC rentables.</p>
+    <footer class="max-w-6xl mx-auto px-6 py-12 border-t border-cardBorder text-center text-slate-500 text-sm">
+        <p>© 2026 RideIQ. Tous droits réservés. Outil indépendant d'aide à la décision pour chauffeurs VTC.</p>
     </footer>
 
 </body>
